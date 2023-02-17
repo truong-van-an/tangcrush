@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.warpper{
+    width: 100%;
+    height: 100%;
+    background: url(image/bgrMail.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    background: rgba(253,233,234,0.9);
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mail{
+    width: 550px;
+    height: 300px;
+    border: 2px dashed rgb(167,32,71);
+    border-radius: 15px;
+}
+.heart{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.heart img:nth-child(1){
+    position: absolute;
+    width: 50px;
+    transform: rotate(-25deg) translate(10px, 10px);
+}
+.heart img:nth-child(2){
+    position: absolute;
+    width: 30px;
+    transform: rotate(-5deg) translate(3px, 50px);
+}
+.heart img:nth-child(3){
+    position: absolute;
+    width: 30px;
+    transform: rotate(5deg) translate(70px, 5px);
+}
+.heart img:nth-child(4){
+    position: absolute;
+    width: 50px;
+    right: 60px;
+    bottom: 60px;
+    transform: rotate(25deg);
+}
+.heart img:nth-child(5){
+    position: absolute;
+    width: 30px;
+    right: 110px;
+    bottom: 80px;
+    transform: rotate(5deg);
+}
+.content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.content .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+.content .title h2{
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    color: rgb(181,12,17);
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: 2s;
+}
+.warpper:hover .title h2{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.content p{
+    padding: 0px 45px;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    opacity: 0;
+    transition: all 1s;
+}
+.warpper:hover .content p{
+    animation: text1 2s forwards ease-in-out 1s;
+}
+@keyframes text1{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.loader-wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 0;
+    z-index: 100000000000;
+}
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    perspective: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+}
+.box-heart {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loaderElectron 0.5s alternate infinite;
+  z-index: -1;
+}
+.heartLoader{
+  position: absolute;
+  background: url('image/traitym.png');
+  background-size: cover;
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 0 10px red) drop-shadow(0 0 40px red) drop-shadow(0 0 60px red);
+}
+
+@keyframes loaderElectron{
+  0%{
+    transform: scale(0.9);
+  }
+  100%{
+    transform: scale(1.1);
+  }
+}
+.inner {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+  }
+  
+  .inner.one {
+    left: 0%;
+    top: 0%;
+    animation: rotate-one calc(var(--i) * 1s) linear infinite;
+    border-bottom: 4px solid red;
+    border-right: 4px solid red;
+    filter: drop-shadow(0 0 5px red) drop-shadow(0 0 5px red);
+  }
+  .inner.one::before {
+    position: absolute;
+    content: '';
+    background: url('image/traitym.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    z-index: 10000000s;
+    top: 40%;
+    transform: translate(-50%, 30%);
+  }
+  .inner.two {
+    right: 0%;
+    top: 0%;
+    animation: rotate-two calc(var(--i) * 1s) linear infinite;
+    border-right: 4px solid red;
+    border-top: 4px solid red;
+    filter: drop-shadow(0 0 5px red) drop-shadow(0 0 5px red);
+  }
+  .inner.two::before {
+    position: absolute;
+    content: '';
+    background: url('image/traitym.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    right: 50%;
+    bottom: 0;
+    transform: translate(30%, 50%);
+  }
+  .inner.three {
+    right: 0%;
+    bottom: 0%;
+    animation: rotate-three calc(var(--i) * 1s) linear infinite;
+    border-top: 4px solid red;
+    border-left: 4px solid red;
+    filter: drop-shadow(0 0 5px red) drop-shadow(0 0 10px red);
+  }
+  .inner.three::before {
+    position: absolute;
+    background: url('image/traitym.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    content: '';
+    right: 2px;
+    top: 50%;
+    transform: translate(50%, -120%);
+  }
+  @keyframes rotate-one {
+    0% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+  }
+  @keyframes rotate-two {
+    0% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+  }
+  @keyframes rotate-three{
+    0% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+  }

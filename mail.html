@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="image/traitym.png">
+    <link rel="stylesheet" href="mail.css">
+    <title>Gửi em!</title>
+</head>
+<body>
+    <div class="warpper preloading">
+        <div class="box">
+            <div class="mail">
+                <div class="heart">
+                    <img src="image/tym.png" alt="">
+                    <img src="image/tym.png" alt="">
+                    <img src="image/tym.png" alt="">
+                    <img src="image/tym.png" alt="">
+                    <img src="image/tym.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h2>Gửi em!</h2>
+                    </div>
+                    <p>
+                        Cậu vẫn luôn không biết được tình cảm tôi 
+                        dành cho cậu. Tôi thích cậu có trời biết,
+                         đất biết, mọi người đều biết chỉ có riêng 
+                         câu là không biết, cậu có bao giờ nghĩ cậu
+                          ngốc nghếch lắm không? Lúc cậu vui, cậu sẽ 
+                          nói chuyện vui vẻ với tôi, lúc cậu buồn thì 
+                          tôi lại chẳng dám hé răng nửa lời hỏi han. Làm 
+                          bạn với cậu là điều mà tôi hận nhất trong cuộc đời. 
+                          Tới bao giờ tôi mới có đủ can đảm phá vỡ cái vỏ bọc 
+                          mang tên tình bạn này mà bày tỏ tình cảm của tôi với cậu?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="loader-wrapper">
+            <div class="loader">
+                <div class="inner one" style="--i:1;"></div>
+                <div class="inner two" style="--i:1;"></div>
+                <div class="inner three" style="--i:1;"></div>
+                <div class="box-heart">
+                    <div class="heartLoader"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+        $(window).on('load', function(event){
+        $('body').removeClass('preloading');
+        $('.loader-wrapper').delay(1000).fadeOut('fast');
+    });
+    </script>
+</html>
